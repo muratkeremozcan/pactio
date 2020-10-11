@@ -1,0 +1,22 @@
+// (2) identify the CONSUMER: identify the component which makes the HTTP calls to the provider 
+
+const request = require('superagent')
+const { Order } = require('./order')
+
+const fetchOrders = () => {
+  return request.get(`http://localhost:${process.env.API_PORT}/orders`).then(
+    res => {
+      return res.body.reduce((acc, o) => {
+        acc.push(new Order(o.id, o.items))
+        return acc
+      }, [])
+    },
+    err => {
+      throw new Error(`Error from response: ${err.body}`)
+    }
+  )
+}
+
+module.exports = {
+  fetchOrders,
+}

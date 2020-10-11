@@ -1,0 +1,545 @@
+I, [2020-05-28T01:51:38.493651 #225]  INFO -- : Received request GET /
+D, [2020-05-28T01:51:38.494089 #225] DEBUG -- : {
+  "path": "/",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "10.128.0.80:5026",
+    "User-Agent": "Go-http-client/1.1",
+    "Accept-Encoding": "gzip",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2020-05-28T01:51:38.494291 #225] ERROR -- : No matching interaction found for GET /
+E, [2020-05-28T01:51:38.494351 #225] ERROR -- : Interaction diffs for that route:
+E, [2020-05-28T01:51:38.556285 #225] ERROR -- : 
+I, [2020-05-28T01:51:38.521546 #225]  INFO -- : Received request GET /
+D, [2020-05-28T01:51:38.579473 #225] DEBUG -- : {
+  "path": "/",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "10.128.0.80:5026",
+    "User-Agent": "Go-http-client/1.1",
+    "Accept-Encoding": "gzip",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2020-05-28T01:51:38.579637 #225] ERROR -- : No matching interaction found for GET /
+E, [2020-05-28T01:51:38.579698 #225] ERROR -- : Interaction diffs for that route:
+E, [2020-05-28T01:51:38.579749 #225] ERROR -- : 
+I, [2020-05-28T01:51:38.509828 #225]  INFO -- : Received request GET /
+I, [2020-05-28T01:51:38.549653 #225]  INFO -- : Received request GET /
+D, [2020-05-28T01:51:38.581331 #225] DEBUG -- : {
+  "path": "/",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "10.128.0.80:5026",
+    "User-Agent": "Go-http-client/1.1",
+    "Accept-Encoding": "gzip",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2020-05-28T01:51:38.582429 #225] ERROR -- : No matching interaction found for GET /
+E, [2020-05-28T01:51:38.582632 #225] ERROR -- : Interaction diffs for that route:
+D, [2020-05-28T01:51:38.581804 #225] DEBUG -- : {
+  "path": "/",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "10.128.0.80:5026",
+    "User-Agent": "Go-http-client/1.1",
+    "Accept-Encoding": "gzip",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2020-05-28T01:51:38.582803 #225] ERROR -- : 
+E, [2020-05-28T01:51:38.582969 #225] ERROR -- : No matching interaction found for GET /
+E, [2020-05-28T01:51:38.583843 #225] ERROR -- : Interaction diffs for that route:
+E, [2020-05-28T01:51:38.587825 #225] ERROR -- : 
+I, [2020-05-28T01:51:38.587666 #225]  INFO -- : Received request GET /
+D, [2020-05-28T01:51:38.606266 #225] DEBUG -- : {
+  "path": "/",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "10.128.0.80:5026",
+    "User-Agent": "Go-http-client/1.1",
+    "Accept-Encoding": "gzip",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2020-05-28T01:51:38.536687 #225]  INFO -- : Received request GET /
+I, [2020-05-28T01:51:38.603593 #225]  INFO -- : Received request GET /
+I, [2020-05-28T01:51:38.605901 #225]  INFO -- : Received request GET /
+D, [2020-05-28T01:51:38.607219 #225] DEBUG -- : {
+  "path": "/",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "10.128.0.80:5026",
+    "User-Agent": "Go-http-client/1.1",
+    "Accept-Encoding": "gzip",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2020-05-28T01:51:38.606435 #225] ERROR -- : No matching interaction found for GET /
+D, [2020-05-28T01:51:38.606823 #225] DEBUG -- : {
+  "path": "/",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "10.128.0.80:5026",
+    "User-Agent": "Go-http-client/1.1",
+    "Accept-Encoding": "gzip",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2020-05-28T01:51:38.607830 #225] ERROR -- : No matching interaction found for GET /
+E, [2020-05-28T01:51:38.607907 #225] ERROR -- : Interaction diffs for that route:
+E, [2020-05-28T01:51:38.607971 #225] ERROR -- : 
+E, [2020-05-28T01:51:38.607503 #225] ERROR -- : Interaction diffs for that route:
+E, [2020-05-28T01:51:38.608590 #225] ERROR -- : 
+I, [2020-05-28T01:51:38.555779 #225]  INFO -- : Received request GET /
+D, [2020-05-28T01:51:38.611597 #225] DEBUG -- : {
+  "path": "/",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "10.128.0.80:5026",
+    "User-Agent": "Go-http-client/1.1",
+    "Accept-Encoding": "gzip",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2020-05-28T01:51:38.611718 #225] ERROR -- : No matching interaction found for GET /
+E, [2020-05-28T01:51:38.611787 #225] ERROR -- : Interaction diffs for that route:
+E, [2020-05-28T01:51:38.611872 #225] ERROR -- : 
+D, [2020-05-28T01:51:38.607048 #225] DEBUG -- : {
+  "path": "/",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "10.128.0.80:5026",
+    "User-Agent": "Go-http-client/1.1",
+    "Accept-Encoding": "gzip",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2020-05-28T01:51:38.612475 #225] ERROR -- : No matching interaction found for GET /
+E, [2020-05-28T01:51:38.612543 #225] ERROR -- : Interaction diffs for that route:
+E, [2020-05-28T01:51:38.612677 #225] ERROR -- : 
+E, [2020-05-28T01:51:38.607371 #225] ERROR -- : No matching interaction found for GET /
+E, [2020-05-28T01:51:38.613121 #225] ERROR -- : Interaction diffs for that route:
+E, [2020-05-28T01:51:38.613197 #225] ERROR -- : 
+I, [2020-05-28T01:51:38.745525 #225]  INFO -- : Received request GET /
+D, [2020-05-28T01:51:38.746033 #225] DEBUG -- : {
+  "path": "/",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "docspactio-getting-started-provider--mefellows.repl.co",
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Cache-Control": "max-age=0",
+    "Referer": "https://docspactio-getting-started-provider--mefellows.repl.co/",
+    "Sec-Fetch-Dest": "iframe",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "same-origin",
+    "Upgrade-Insecure-Requests": "1",
+    "X-Forwarded-For": "130.211.0.120",
+    "X-Replit-User-Id": "",
+    "X-Replit-User-Name": "",
+    "X-Replit-User-Roles": "",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2020-05-28T01:51:38.746173 #225] ERROR -- : No matching interaction found for GET /
+E, [2020-05-28T01:51:38.746217 #225] ERROR -- : Interaction diffs for that route:
+E, [2020-05-28T01:51:38.746262 #225] ERROR -- : 
+I, [2020-05-28T01:51:38.805643 #225]  INFO -- : Received request GET /
+I, [2020-05-28T01:51:38.964936 #225]  INFO -- : Received request GET /
+D, [2020-05-28T01:51:39.227837 #225] DEBUG -- : {
+  "path": "/",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "docspactio-getting-started-provider--mefellows.repl.co",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept-Language": "en-US,en;q=0.9,ro;q=0.8",
+    "Cache-Control": "max-age=0",
+    "Referer": "https://docspactio-getting-started-provider--mefellows.repl.co/",
+    "Sec-Fetch-Dest": "iframe",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "same-origin",
+    "Upgrade-Insecure-Requests": "1",
+    "X-Forwarded-For": "130.211.1.42",
+    "X-Replit-User-Id": "",
+    "X-Replit-User-Name": "",
+    "X-Replit-User-Roles": "",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2020-05-28T01:51:39.228018 #225] ERROR -- : No matching interaction found for GET /
+E, [2020-05-28T01:51:39.228093 #225] ERROR -- : Interaction diffs for that route:
+E, [2020-05-28T01:51:39.229123 #225] ERROR -- : 
+I, [2020-05-28T01:51:39.233972 #225]  INFO -- : Registered expected interaction GET /orders
+D, [2020-05-28T01:51:39.127137 #225] DEBUG -- : {
+  "path": "/",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "docspactio-getting-started-provider--mefellows.repl.co",
+    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Cache-Control": "max-age=0",
+    "Referer": "https://docspactio-getting-started-provider--mefellows.repl.co/",
+    "Sec-Fetch-Dest": "iframe",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "same-origin",
+    "Upgrade-Insecure-Requests": "1",
+    "X-Forwarded-For": "35.191.1.43",
+    "X-Replit-User-Id": "",
+    "X-Replit-User-Name": "",
+    "X-Replit-User-Roles": "",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2020-05-28T01:51:39.246035 #225] ERROR -- : No matching interaction found for GET /
+E, [2020-05-28T01:51:39.246117 #225] ERROR -- : Interaction diffs for that route:
+E, [2020-05-28T01:51:39.246177 #225] ERROR -- : 
+I, [2020-05-28T01:51:39.107704 #225]  INFO -- : Received request GET /
+D, [2020-05-28T01:51:39.246974 #225] DEBUG -- : {
+  "path": "/",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "docspactio-getting-started-provider--mefellows.repl.co",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept-Language": "he-IL,he;q=0.9,en-US;q=0.8,en;q=0.7",
+    "Cache-Control": "max-age=0",
+    "Referer": "https://docspactio-getting-started-provider--mefellows.repl.co/",
+    "Sec-Fetch-Dest": "iframe",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "same-origin",
+    "Upgrade-Insecure-Requests": "1",
+    "X-Forwarded-For": "130.211.0.204",
+    "X-Replit-User-Id": "",
+    "X-Replit-User-Name": "",
+    "X-Replit-User-Roles": "",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2020-05-28T01:51:39.247178 #225] ERROR -- : No matching interaction found for GET /
+E, [2020-05-28T01:51:39.247248 #225] ERROR -- : Interaction diffs for that route:
+E, [2020-05-28T01:51:39.247314 #225] ERROR -- : 
+I, [2020-05-28T01:51:39.124174 #225]  INFO -- : Received request GET /
+D, [2020-05-28T01:51:39.248352 #225] DEBUG -- : {
+  "path": "/",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "docspactio-getting-started-provider--mefellows.repl.co",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept-Language": "en-US,en;q=0.9,es;q=0.8",
+    "Cache-Control": "max-age=0",
+    "Referer": "https://docspactio-getting-started-provider--mefellows.repl.co/",
+    "Sec-Fetch-Dest": "iframe",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "same-origin",
+    "Upgrade-Insecure-Requests": "1",
+    "X-Forwarded-For": "35.191.1.52",
+    "X-Replit-User-Id": "",
+    "X-Replit-User-Name": "",
+    "X-Replit-User-Roles": "",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2020-05-28T01:51:39.248573 #225] ERROR -- : No matching interaction found for GET /
+E, [2020-05-28T01:51:39.248633 #225] ERROR -- : Interaction diffs for that route:
+E, [2020-05-28T01:51:39.248691 #225] ERROR -- : 
+I, [2020-05-28T01:51:39.224280 #225]  INFO -- : Received request GET /
+D, [2020-05-28T01:51:39.249773 #225] DEBUG -- : {
+  "path": "/",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "docspactio-getting-started-provider--mefellows.repl.co",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept-Language": "en-GB,en-US;q=0.9,en;q=0.8,ru;q=0.7",
+    "Cache-Control": "max-age=0",
+    "Referer": "https://docspactio-getting-started-provider--mefellows.repl.co/",
+    "Sec-Fetch-Dest": "iframe",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "same-origin",
+    "Upgrade-Insecure-Requests": "1",
+    "X-Forwarded-For": "35.191.1.37",
+    "X-Replit-User-Id": "",
+    "X-Replit-User-Name": "",
+    "X-Replit-User-Roles": "",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2020-05-28T01:51:39.249998 #225] ERROR -- : No matching interaction found for GET /
+E, [2020-05-28T01:51:39.250062 #225] ERROR -- : Interaction diffs for that route:
+E, [2020-05-28T01:51:39.250116 #225] ERROR -- : 
+I, [2020-05-28T01:51:39.100368 #225]  INFO -- : Received request GET /
+D, [2020-05-28T01:51:39.257069 #225] DEBUG -- : {
+  "path": "/",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "docspactio-getting-started-provider--mefellows.repl.co",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept-Language": "en-AU,en-US;q=0.8,en;q=0.6,en-gb;q=0.7",
+    "Cache-Control": "max-age=0",
+    "Referer": "https://docspactio-getting-started-provider--mefellows.repl.co/",
+    "Sec-Fetch-Dest": "iframe",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "same-origin",
+    "Upgrade-Insecure-Requests": "1",
+    "X-Forwarded-For": "130.211.1.97",
+    "X-Replit-User-Id": "",
+    "X-Replit-User-Name": "",
+    "X-Replit-User-Roles": "",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2020-05-28T01:51:39.257248 #225] ERROR -- : No matching interaction found for GET /
+E, [2020-05-28T01:51:39.257297 #225] ERROR -- : Interaction diffs for that route:
+E, [2020-05-28T01:51:39.257338 #225] ERROR -- : 
+I, [2020-05-28T01:51:39.085971 #225]  INFO -- : Received request GET /
+D, [2020-05-28T01:51:39.258162 #225] DEBUG -- : {
+  "path": "/",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "docspactio-getting-started-provider--mefellows.repl.co",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept-Language": "en-US,en;q=0.9,fr;q=0.8,zh-TW;q=0.7,zh;q=0.6",
+    "Cache-Control": "max-age=0",
+    "Referer": "https://docspactio-getting-started-provider--mefellows.repl.co/",
+    "Sec-Fetch-Dest": "iframe",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "same-origin",
+    "Upgrade-Insecure-Requests": "1",
+    "X-Forwarded-For": "130.211.1.133",
+    "X-Replit-User-Id": "",
+    "X-Replit-User-Name": "",
+    "X-Replit-User-Roles": "",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2020-05-28T01:51:39.258334 #225] ERROR -- : No matching interaction found for GET /
+E, [2020-05-28T01:51:39.258393 #225] ERROR -- : Interaction diffs for that route:
+E, [2020-05-28T01:51:39.258436 #225] ERROR -- : 
+I, [2020-05-28T01:51:39.244615 #225]  INFO -- : Received request GET /
+I, [2020-05-28T01:51:39.116618 #225]  INFO -- : Received request GET /
+D, [2020-05-28T01:51:39.259958 #225] DEBUG -- : {
+  "path": "/",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "docspactio-getting-started-provider--mefellows.repl.co",
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://repl.it/@mefellows/docspactio-getting-started-provider",
+    "Sec-Fetch-Dest": "iframe",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "cross-site",
+    "Upgrade-Insecure-Requests": "1",
+    "X-Forwarded-For": "35.191.1.33",
+    "X-Replit-User-Id": "",
+    "X-Replit-User-Name": "",
+    "X-Replit-User-Roles": "",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2020-05-28T01:51:39.260188 #225] ERROR -- : No matching interaction found for GET /
+E, [2020-05-28T01:51:39.260262 #225] ERROR -- : Interaction diffs for that route:
+E, [2020-05-28T01:51:39.260324 #225] ERROR -- : 
+D, [2020-05-28T01:51:39.259584 #225] DEBUG -- : {
+  "path": "/",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "docspactio-getting-started-provider--mefellows.repl.co",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept-Language": "en-US,en;q=0.9,ru;q=0.8,be;q=0.7",
+    "Cache-Control": "max-age=0",
+    "Referer": "https://docspactio-getting-started-provider--mefellows.repl.co/",
+    "Sec-Fetch-Dest": "iframe",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "same-origin",
+    "Upgrade-Insecure-Requests": "1",
+    "X-Forwarded-For": "35.191.1.47",
+    "X-Replit-User-Id": "",
+    "X-Replit-User-Name": "",
+    "X-Replit-User-Roles": "",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2020-05-28T01:51:39.261243 #225] ERROR -- : No matching interaction found for GET /
+E, [2020-05-28T01:51:39.261338 #225] ERROR -- : Interaction diffs for that route:
+E, [2020-05-28T01:51:39.261391 #225] ERROR -- : 
+I, [2020-05-28T01:51:39.256626 #225]  INFO -- : Received request GET /
+D, [2020-05-28T01:51:39.263452 #225] DEBUG -- : {
+  "path": "/",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "docspactio-getting-started-provider--mefellows.repl.co",
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://repl.it/@mefellows/docspactio-getting-started-provider",
+    "Sec-Fetch-Dest": "iframe",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "cross-site",
+    "Upgrade-Insecure-Requests": "1",
+    "X-Forwarded-For": "35.191.1.33",
+    "X-Replit-User-Id": "",
+    "X-Replit-User-Name": "",
+    "X-Replit-User-Roles": "",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2020-05-28T01:51:39.264631 #225] ERROR -- : No matching interaction found for GET /
+E, [2020-05-28T01:51:39.264702 #225] ERROR -- : Interaction diffs for that route:
+E, [2020-05-28T01:51:39.264746 #225] ERROR -- : 
+D, [2020-05-28T01:51:39.245609 #225] DEBUG -- : {
+  "description": "a request for orders",
+  "providerState": "there are orders",
+  "request": {
+    "method": "GET",
+    "path": "/orders"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": {
+      "json_class": "Pact::ArrayLike",
+      "contents": {
+        "id": 1,
+        "items": {
+          "json_class": "Pact::ArrayLike",
+          "contents": {
+            "name": "burger",
+            "quantity": 2,
+            "value": 100
+          },
+          "min": 1
+        }
+      },
+      "min": 1
+    }
+  }
+}
+I, [2020-05-28T01:51:39.312711 #225]  INFO -- : Received request GET /orders
+D, [2020-05-28T01:51:39.312956 #225] DEBUG -- : {
+  "path": "/orders",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:45907",
+    "Accept-Encoding": "gzip, deflate",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2020-05-28T01:51:39.313670 #225]  INFO -- : Found matching response for GET /orders
+D, [2020-05-28T01:51:39.314006 #225] DEBUG -- : {
+  "status": 200,
+  "headers": {
+    "Content-Type": "application/json; charset=utf-8"
+  },
+  "body": {
+    "json_class": "Pact::ArrayLike",
+    "contents": {
+      "id": 1,
+      "items": {
+        "json_class": "Pact::ArrayLike",
+        "contents": {
+          "name": "burger",
+          "quantity": 2,
+          "value": 100
+        },
+        "min": 1
+      }
+    },
+    "min": 1
+  }
+}
+W, [2020-05-28T01:51:39.380095 #225]  WARN -- : Verifying - actual interactions do not match expected interactions. 
+Unexpected requests:
+	GET /
+	GET /
+	GET /
+	GET /
+	GET /
+	GET /
+	GET /
+	GET /
+	GET /
+	GET /
+	GET /
+	GET /
+	GET /
+	GET /
+	GET /
+	GET /
+	GET /
+	GET /
+	GET /
+	GET /
+
+
+W, [2020-05-28T01:51:39.380226 #225]  WARN -- : Unexpected requests:
+	GET /
+	GET /
+	GET /
+	GET /
+	GET /
+	GET /
+	GET /
+	GET /
+	GET /
+	GET /
+	GET /
+	GET /
+	GET /
+	GET /
+	GET /
+	GET /
+	GET /
+	GET /
+	GET /
+	GET /
+
+
+I, [2020-05-28T01:51:39.400372 #225]  INFO -- : Cleared interactions
+I, [2020-05-28T01:51:39.467892 #225]  INFO -- : Writing pact for GettingStartedOrderApi to /home/runner/docspactio-getting-started-provider/pacts/gettingstartedorderweb-gettingstartedorderapi.json
