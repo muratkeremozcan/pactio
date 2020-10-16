@@ -14,7 +14,7 @@ let opts
 describe('Pact Verification', () => {
   before(async () => {
     port = await getPort()
-    // specify the options, this is where the administrative info is
+    // (5.1) specify the options, this is where the administrative info is
     opts = { 
       provider: providerName,
       providerBaseUrl: `http://localhost:${port}`,
@@ -32,7 +32,7 @@ describe('Pact Verification', () => {
     })
   })
 
-  // execute the provider test using Verifier().verifyProvider to assert the options specified
+  // (5.2) execute the provider test using Verifier().verifyProvider to assert the options specified
   it('should validate the expectations of Order Web', () => {
     return new Verifier() //
       .verifyProvider(opts)

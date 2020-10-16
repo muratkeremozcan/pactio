@@ -12,6 +12,7 @@ chai.use(chaiAsPromised)
 describe('Pact with Order API', () => {
   // (4.1) start the MOCK PROVIDER on a randomly available port,
   // and set its port so clients can dynamically find the endpoint
+  // then verify each pact
   before(() =>
     provider.setup().then(opts => {
       process.env.API_PORT = opts.port
@@ -35,6 +36,7 @@ describe('Pact with Order API', () => {
 
     describe('when a call to the API is made', () => {
       before(() => {
+        // (4.2) set up pact interactions
         return provider.addInteraction({
           state: 'there are orders',
           uponReceiving: 'a request for orders',
