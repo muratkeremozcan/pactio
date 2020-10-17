@@ -10,19 +10,23 @@ const { provider } = require('../pact') // KEY: the MOCK PROVIDER
 chai.use(chaiAsPromised)
 
 describe('Pact with Order API', () => {
-  // (4.1) start the MOCK PROVIDER on a randomly available port,
-  // and set its port so clients can dynamically find the endpoint
-  // then verify each pact
+  // (4.1) setup the MOCK PROVIDER on a randomly available port,
+  // and set its port so clients can dynamically find the endpoint  then verify each pact
+  // This server acts as a Test Double for the real Provider API.
+  // We then call addInteraction() for each test to configure the Mock Service to act like the Provider
+  // It also sets up expectations for what requests are to come, and will fail if the calls are not seen.
   before(() =>
     provider.setup().then(opts => {
       process.env.API_PORT = opts.port
     })
   )
+  // After each individual test (one or more interactions)  we validate that the correct request came through.
+  // This ensures what we _expect_ from the provider, is actually what we've asked for (and is what gets captured in the contract)
   afterEach(() => provider.verify())
 
   describe('given there are orders', () => {
 
-    // (4.2) set up the response
+    // (4.2) set up the match to the response
     const itemProperties = {
       name: 'burger',
       quantity: 2,

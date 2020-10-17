@@ -21,8 +21,13 @@ const provider = new Pact({
 // (4) write the pact.io test and generate the pact file
 describe("API Pact test", () => {
 
-    // (4.1) start the MOCK PROVIDER, then verify each pact
+    // (4.1) setup the MOCK PROVIDER, then verify each pact
+    // This server acts as a Test Double for the real Provider API.
+    // We then call addInteraction() for each test to configure the Mock Service to act like the Provider
+    // It also sets up expectations for what requests are to come, and will fail if the calls are not seen.
     beforeAll(() => provider.setup());
+    // After each individual test (one or more interactions)  we validate that the correct request came through.
+    // This ensures what we _expect_ from the provider, is actually what we've asked for (and is what gets captured in the contract)
     afterEach(() => provider.verify());
     // (4.4) record the pact
     afterAll(() => provider.finalize());
@@ -46,7 +51,11 @@ describe("API Pact test", () => {
                     headers: {
                         'Content-Type': 'application/json; charset=utf-8'
                     },
-                    body: eachLike({ // (4.2) use the response estimate (eachLike): "the response will be something like this"
+                    // (4.2) define the payload using flexible matchers
+                    // This makes the test much more resilient to changes in actual data.
+                    // Here we specify the 'shape' of the object that we care about.
+                    // It is also import here to not put in expectations for parts of the API we don't care about
+                    body: eachLike({
                         id: "09",
                         type: "CREDIT_CARD",
                         name: "Gem Visa"
