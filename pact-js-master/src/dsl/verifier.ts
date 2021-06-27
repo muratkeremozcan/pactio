@@ -6,10 +6,10 @@ import pact from "@pact-foundation/pact-node"
 import { qToPromise } from "../common/utils"
 import { VerifierOptions as PactNodeVerifierOptions } from "@pact-foundation/pact-node"
 import serviceFactory from "@pact-foundation/pact-node"
-import { omit, isEmpty } from "lodash"
+import { omit, isEmpty, pickBy, identity, reduce } from "lodash"
 import * as express from "express"
 import * as http from "http"
-import logger from "../common/logger"
+import logger, { setLogLevel } from "../common/logger"
 import { LogLevel } from "./options"
 import ConfigurationError from "../errors/configurationError"
 import { localAddresses } from "../common/net"
@@ -22,18 +22,22 @@ export interface ProviderState {
 }
 
 export interface StateHandler {
-  [name: string]: () => Promise<any>
+  [name: string]: () => Promise<unknown>
 }
+
+export type Hook = () => Promise<unknown>
 
 interface ProxyOptions {
   logLevel?: LogLevel
   requestFilter?: express.RequestHandler
   stateHandlers?: StateHandler
+  beforeEach?: Hook
+  afterEach?: Hook
   validateSSL?: boolean
   changeOrigin?: boolean
 }
 
-export type VerifierOptions = ProxyOptions & PactNodeVerifierOptions
+export type VerifierOptions = PactNodeVerifierOptions & ProxyOptions
 
 export class Verifier {
   private address: string = "http://localhost"
@@ -126,6 +130,15 @@ export class Verifier {
 
     app.use(this.stateSetupPath, bodyParser.json())
     app.use(this.stateSetupPath, bodyParser.urlencoded({ extended: true }))
+    this.registerBeforeHook(app)
+    this.registerAfterHook(app)
+
+    // Trace req/res logging
+    if (this.config.logLevel === "debug") {
+      logger.info("debug request/response logging enabled")
+      app.use(this.createRequestTracer())
+      app.use(this.createResponseTracer())
+    }
 
     // Allow for request filtering
     if (this.config.requestFilter !== undefined) {
@@ -149,12 +162,84 @@ export class Verifier {
   }
 
   private createProxyStateHandler() {
-    return (req: any, res: any) => {
+    return (req: express.Request, res: express.Response) => {
       const message: ProviderState = req.body
 
       return this.setupStates(message)
         .then(() => res.sendStatus(200))
         .catch(e => res.status(500).send(e))
+    }
+  }
+
+  private registerBeforeHook(app: express.Express) {
+    app.use(async (req, res, next) => {
+      if (this.config.beforeEach !== undefined) {
+        logger.trace("registered 'beforeEach' hook")
+        if (req.path === this.stateSetupPath) {
+          logger.debug("executing 'beforeEach' hook")
+          try {
+            await this.config.beforeEach()
+          } catch (e) {
+            logger.error("error executing 'beforeEach' hook: ", e)
+            next(new Error(`error executing 'beforeEach' hook: ${e}`))
+          }
+        }
+      }
+      next()
+    })
+  }
+
+  private registerAfterHook(app: express.Express) {
+    app.use(async (req, res, next) => {
+      if (this.config.afterEach !== undefined) {
+        logger.trace("registered 'afterEach' hook")
+        next()
+        if (req.path !== this.stateSetupPath) {
+          logger.debug("executing 'afterEach' hook")
+          try {
+            await this.config.afterEach()
+          } catch (e) {
+            logger.error("error executing 'afterEach' hook: ", e)
+            next(new Error(`error executing 'afterEach' hook: ${e}`))
+          }
+        }
+      } else {
+        next()
+      }
+    })
+  }
+
+  private createRequestTracer(): express.RequestHandler {
+    return (req, _, next) => {
+      logger.trace("incoming request", removeEmptyRequestProperties(req))
+      next()
+    }
+  }
+
+  private createResponseTracer(): express.RequestHandler {
+    return (_, res, next) => {
+      const [oldWrite, oldEnd] = [res.write, res.end]
+      const chunks: Buffer[] = []
+
+      res.write = (chunk: any) => {
+        chunks.push(Buffer.from(chunk))
+        return oldWrite.apply(res, [chunk])
+      }
+
+      res.end = (chunk: any) => {
+        if (chunk) {
+          chunks.push(Buffer.from(chunk))
+        }
+        const body = Buffer.concat(chunks).toString("utf8")
+        logger.trace(
+          "outgoing response",
+          removeEmptyResponseProperties(body, res)
+        )
+        oldEnd.apply(res, [chunk])
+      }
+      if (typeof next === "function") {
+        next()
+      }
     }
   }
 
@@ -184,7 +269,7 @@ export class Verifier {
 
     if (this.config.logLevel && !isEmpty(this.config.logLevel)) {
       serviceFactory.logLevel(this.config.logLevel)
-      logger.level(this.config.logLevel)
+      setLogLevel(this.config.logLevel)
     }
 
     this.deprecatedFields.forEach(f => {
@@ -218,3 +303,31 @@ export class Verifier {
     )
   }
 }
+
+const removeEmptyRequestProperties = (req: express.Request) =>
+  pickBy(
+    {
+      body: req.body,
+      headers: req.headers,
+      method: req.method,
+      path: req.path,
+    },
+    identity
+  )
+
+const removeEmptyResponseProperties = (body: any, res: express.Response) =>
+  pickBy(
+    {
+      body,
+      headers: reduce(
+        res.getHeaders(),
+        (acc: any, val, index) => {
+          acc[index] = val
+          return acc
+        },
+        {}
+      ),
+      status: res.statusCode,
+    },
+    identity
+  )

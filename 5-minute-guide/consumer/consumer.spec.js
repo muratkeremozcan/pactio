@@ -41,6 +41,8 @@ describe('Pact with Order API', () => {
     describe('when a call to the API is made', () => {
       before(() => {
         // (4.2) set up pact interactions
+        // Note that we don't call the consumer API endpoints directly, but use unit-style tests that test the collaborating function behaviour
+        // we want to test the function that is calling the external service.
         return provider.addInteraction({
           state: 'there are orders',
           uponReceiving: 'a request for orders',
@@ -49,7 +51,11 @@ describe('Pact with Order API', () => {
             method: 'GET',
           },
           willRespondWith: {
-            body: eachLike(orderProperties), // (4.2) use the response estimate (eachLike): "the response will be something like this"
+            // (4.2) define the payload using flexible matchers
+            // This makes the test much more resilient to changes in actual data.
+            // Here we specify the 'shape' of the object that we care about.
+            // It is also import here to not put in expectations for parts of the API we don't care about
+            body: eachLike(orderProperties),
             status: 200,
             headers: {
               'Content-Type': 'application/json; charset=utf-8',

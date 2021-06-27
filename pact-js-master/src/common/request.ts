@@ -19,6 +19,7 @@ export enum HTTPMethod {
   PROPFIND = "PROPFIND",
   PROPPATCH = "PROPPATCH",
   UNLOCK = "UNLOCK",
+  REPORT = "REPORT",
 }
 
 export type methods =
@@ -36,9 +37,11 @@ export type methods =
   | "PROPFIND"
   | "PROPPATCH"
   | "UNLOCK"
+  | "REPORT"
 
 export class Request {
   private readonly transport = Popsicle.createTransport({
+    maxBufferSize: Infinity, // Allow data of any size
     rejectUnauthorized: false, // Need to tell node to ignore bad ssl cert
     type: "text",
   })

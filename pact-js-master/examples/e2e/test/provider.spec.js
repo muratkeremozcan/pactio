@@ -1,4 +1,5 @@
 const { Verifier } = require("@pact-foundation/pact")
+const { versionFromGitTag } = require("@pact-foundation/absolute-version")
 const chai = require("chai")
 const chaiAsPromised = require("chai-as-promised")
 chai.use(chaiAsPromised)
@@ -10,18 +11,16 @@ server.listen(8081, () => {
   console.log("Animal Profile Service listening on http://localhost:8081")
 })
 
-// (5) supply the pact file to the PROVIDER and run verify that the provider meets all consumer expectations
+// Verify that the provider meets all consumer expectations
 describe("Pact Verification", () => {
   it("validates the expectations of Matching Service", () => {
     let token = "INVALID TOKEN"
 
-    // (5.1) specify the options, this is where the administrative info is
     let opts = {
-      provider: "Animal Profile Service",
+      provider: "e2e Provider Example",
       logLevel: "DEBUG",
       providerBaseUrl: "http://localhost:8081",
 
-      // handle authorization
       requestFilter: (req, res, next) => {
         console.log(
           "Middleware invoked before provider API - injecting Authorization token"
@@ -33,10 +32,6 @@ describe("Pact Verification", () => {
         next()
       },
 
-      // setup states: the state <value>s have to match the consumer's addInteraction({state: '<value>'})
-      // KEY: this is how we enable tests themselves to be stateless in Pact.io
-      // note: For each interaction in a pact file, the order of execution is as follows:
-      // BeforeEach -> StateHandler -> RequestFilter (pre) -> Execute Provider Test -> RequestFilter (post) -> AfterEach
       stateHandlers: {
         "Has no animals": () => {
           animalRepository.clear()
@@ -96,10 +91,12 @@ describe("Pact Verification", () => {
       // You can obtain the token from https://<your broker>.pact.dius.com.au/settings/api-tokens
       // pactBrokerToken: "<insert your token here"
       publishVerificationResult: true,
-      providerVersion: "1.0.0",
+      // Your version numbers need to be unique for every different version of your provider
+      // see https://docs.pact.io/getting_started/versioning_in_the_pact_broker/ for details.
+      // If you use git tags, then you can use @pact-foundation/absolute-version as we do here.
+      providerVersion: versionFromGitTag(),
     }
 
-    // (5.2) execute the provider test using Verifier().verifyProvider to assert the options specified
     return new Verifier(opts).verifyProvider().then(output => {
       console.log("Pact Verification Complete!")
       console.log(output)

@@ -36,6 +36,8 @@ describe("API Pact test", () => {
         test("products exists", async () => {
 
             // (4.2) set up pact interactions
+            // Note that we don't call the consumer API endpoints directly, but use unit-style tests that test the collaborating function behaviour
+            // we want to test the function that is calling the external service.
             await provider.addInteraction({
                 state: 'products exist',
                 uponReceiving: 'get all products',

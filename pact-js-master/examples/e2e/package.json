@@ -17,6 +17,7 @@
   "author": "matt.fellows@onegeek.com.au",
   "license": "MIT",
   "devDependencies": {
+    "@pact-foundation/absolute-version": "0.0.1",
     "@pact-foundation/pact": "^9.11.1",
     "body-parser": "^1.18.3",
     "chai": "^3.5.0",
@@ -24,11 +25,9 @@
     "cli-color": "^1.1.0",
     "concurrently": "^3.1.0",
     "cors": "^2.8.1",
-    "eslint": "^3.13.1",
-    "eslint-config-google": "^0.7.1",
     "express": "^4.16.3",
     "express-http-proxy": "^1.4.0",
-    "mocha": "^5.2.0",
+    "mocha": "^8.2.1",
     "superagent": "^3.8.3"
   }
 }

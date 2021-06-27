@@ -19,6 +19,7 @@ describe("Pact Verification", () => {
             providerBaseUrl: "http://localhost:8080",
             provider: "ProductService",
             providerVersion: "1.0.0",
+            // Fetch pacts from broker
             pactBrokerUrl: process.env.PACT_BROKER_URL || "http://localhost:8000",
             pactBrokerUsername: process.env.PACT_BROKER_USERNAME || "pact_workshop",
             pactBrokerPassword: process.env.PACT_BROKER_PASSWORD || "pact_workshop",

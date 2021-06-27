@@ -7,16 +7,10 @@ const LOG_LEVEL = process.env.LOG_LEVEL || "WARN"
 
 chai.use(chaiAsPromised)
 
-// high level:
-// (3) create the MOCK PROVIDER; new Pact({...})
-// (4) write the pact.io test and generate the pact file
-// (5) supply the pact file to the PROVIDER (use a broker) and run the provider test
-
 describe("Pact", () => {
-  // (3) create the MOCK PROVIDER; new Pact({...})
   const provider = new Pact({
-    consumer: "Matching Service",
-    provider: "Animal Profile Service",
+    consumer: "e2e Consumer Example",
+    provider: "e2e Provider Example",
     // port: 1234, // You can set the port explicitly here or dynamically (see setup() below)
     log: path.resolve(process.cwd(), "logs", "mockserver-integration.log"),
     dir: path.resolve(process.cwd(), "pacts"),
@@ -26,8 +20,6 @@ describe("Pact", () => {
 
   // Alias flexible matchers for simplicity
   const { eachLike, like, term, iso8601DateTimeWithMillis } = Matchers
-
-  // set up the match to the response
 
   // Animal we want to match :)
   const suitor = {
@@ -56,7 +48,8 @@ describe("Pact", () => {
   //
   // This makes the test much more resilient to changes in actual data.
   // Here we specify the 'shape' of the object that we care about.
-  // It is also import here to not put in expectations for parts of the API we don't care about
+  // It is also import here to not put in expectations for parts of the
+  // API we don't care about
   const animalBodyExpectation = {
     id: like(1),
     available_from: iso8601DateTimeWithMillis(),
@@ -85,10 +78,12 @@ describe("Pact", () => {
     min: MIN_ANIMALS,
   })
 
-  // (4.1) start the MOCK PROVIDER
+  // Setup a Mock Server before unit tests run.
   // This server acts as a Test Double for the real Provider API.
-  // We then call addInteraction() for each test to configure the Mock Service to act like the Provider
-  // It also sets up expectations for what requests are to come, and will fail if the calls are not seen.
+  // We then call addInteraction() for each test to configure the Mock Service
+  // to act like the Provider
+  // It also sets up expectations for what requests are to come, and will fail
+  // if the calls are not seen.
   before(() =>
     provider.setup().then(opts => {
       // Get a dynamic port from the runtime
@@ -96,8 +91,10 @@ describe("Pact", () => {
     })
   )
 
-  // After each individual test (one or more interactions)  we validate that the correct request came through.
-  // This ensures what we _expect_ from the provider, is actually what we've asked for (and is what gets captured in the contract)
+  // After each individual test (one or more interactions)
+  // we validate that the correct request came through.
+  // This ensures what we _expect_ from the provider, is actually
+  // what we've asked for (and is what gets captured in the contract)
   afterEach(() => provider.verify())
 
   // Configure and import consumer API
@@ -108,12 +105,14 @@ describe("Pact", () => {
     getAnimalById,
   } = require("../consumer")
 
+  // Verify service client works as expected.
+  //
+  // Note that we don't call the consumer API endpoints directly, but
+  // use unit-style tests that test the collaborating function behaviour -
+  // we want to test the function that is calling the external service.
   describe("when a call to list all animals from the Animal Service is made", () => {
     describe("and the user is not authenticated", () => {
       before(() =>
-        // (4.2) set up pact interactions
-        // Note that we don't call the consumer API endpoints directly, but use unit-style tests that test the collaborating function behaviour
-        // we want to test the function that is calling the external service.
         provider.addInteraction({
           state: "is not authenticated",
           uponReceiving: "a request for all animals",
@@ -126,7 +125,7 @@ describe("Pact", () => {
           },
         })
       )
-      // (4.3) execute the test
+
       it("returns a 401 unauthorized", () => {
         return expect(suggestion(suitor)).to.eventually.be.rejectedWith(
           "Unauthorized"
@@ -153,7 +152,7 @@ describe("Pact", () => {
             },
           })
         )
-        // (4.3) execute the test
+
         it("returns a list of animals", done => {
           const suggestedMates = suggestion(suitor)
 
@@ -255,7 +254,7 @@ describe("Pact", () => {
     })
   })
 
-  // (4.4) record the pact
+  // Write pact files
   after(() => {
     return provider.finalize()
   })

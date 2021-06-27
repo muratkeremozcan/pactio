@@ -2,6 +2,121 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.16.0](https://github.com/pact-foundation/pact-js/compare/v9.15.5...v9.16.0) (2021-06-21)
+
+
+### Features
+
+* add withMutation alias for withQuery for graphql interactions ([1564a76](https://github.com/pact-foundation/pact-js/commit/1564a76b6a9b43f1eecb5f365b45b2ba29dcda1a))
+
+
+### Fixes and Improvements
+
+* Print a much better error when the mock service fails to start ([bbbc6f2](https://github.com/pact-foundation/pact-js/commit/bbbc6f21bcdd2e09a74ecf338b4f683e5826d7b7))
+
+### [9.15.5](https://github.com/pact-foundation/pact-js/compare/v9.15.4...v9.15.5) (2021-04-21)
+
+
+### Fixes and Improvements
+
+* **pact-node:** Fix for [#635](https://github.com/pact-foundation/pact-js/issues/635) (issue with message pact not respecting matching rules) ([5063b7e](https://github.com/pact-foundation/pact-js/commit/5063b7e833ce736fd0916dee15cfce40683c871a))
+
+### [9.15.4](https://github.com/pact-foundation/pact-js/compare/v9.15.3...v9.15.4) (2021-03-31)
+
+
+### Fixes and Improvements
+
+* Bump pact-node version to get vulnerability fixes ([bc0e7f0](https://github.com/pact-foundation/pact-js/commit/bc0e7f019ef8585d4fc5c980575e0ec0a72f1b65))
+
+### [9.15.3](https://github.com/pact-foundation/pact-js/compare/v9.15.2...v9.15.3) (2021-03-10)
+
+
+### Fixes and Improvements
+
+* **pact-web-types:** Fix issue where typescript types were not exposed in pact-web ([d529082](https://github.com/pact-foundation/pact-js/commit/d529082f0b1e7d969ebdedae091adc54ad4be464))
+
+### [9.15.2](https://github.com/pact-foundation/pact-js/compare/v9.15.1...v9.15.2) (2021-02-28)
+
+
+### Fixes and Improvements
+
+* **pact-node:** bump dependency on pact-node to fix regression in underlying pact broker interface ([a200414](https://github.com/pact-foundation/pact-js/commit/a2004143782be418b59a8266834c6aa8e6d2a1ef))
+
+### [9.15.1](https://github.com/pact-foundation/pact-js/compare/v9.15.0...v9.15.1) (2021-02-23)
+
+
+### Fixes and Improvements
+
+* package.json & package-lock.json to reduce vulnerabilities ([aa8036c](https://github.com/pact-foundation/pact-js/commit/aa8036c2dd424d351d2afab003c1e539e2bc6e85))
+
+## [9.15.0](https://github.com/pact-foundation/pact-js/compare/v9.14.2...v9.15.0) (2021-02-02)
+
+
+### Features
+
+* **provider-states:** Add beforeEach and afterEach hooks to provider verification ([#529](https://github.com/pact-foundation/pact-js/issues/529)) - Fixes [#526](https://github.com/pact-foundation/pact-js/issues/526) ([8147042](https://github.com/pact-foundation/pact-js/commit/8147042f8dcbc396e991331afaf6c23d6c362b10))
+
+
+### Fixes and Improvements
+
+* **logger:** lowercase log level ([8388776](https://github.com/pact-foundation/pact-js/commit/8388776df0f576d3860cf11280cebb96e9cd5aab))
+* **logger:** replace bunyan with pino ([fe6dd30](https://github.com/pact-foundation/pact-js/commit/fe6dd302cc2de389d009eaf0136776d8366d0394))
+
+### [9.14.2](https://github.com/pact-foundation/pact-js/compare/v9.14.1...v9.14.2) (2021-01-28)
+
+
+### Fixes and Improvements
+
+* **pact-node:** Bump dependency on pact-node to avoid regression in query string matching ([9c733ce](https://github.com/pact-foundation/pact-js/commit/9c733ce5bd72c25ad5b71bb8bec0ec1903c9bf52))
+* **pact-node:** bump dependency on pact-node to get verbose logging in verification [#583](https://github.com/pact-foundation/pact-js/issues/583) ([66e9dca](https://github.com/pact-foundation/pact-js/commit/66e9dcafd555b000de357b6dffa1b166cadb670e))
+
+### [9.14.1](https://github.com/pact-foundation/pact-js/compare/v9.14.0...v9.14.1) (2021-01-27)
+
+
+### Fixes and Improvements
+
+* set permissions for Ruby binaries on GH Actions ([8881ee7](https://github.com/pact-foundation/pact-js/commit/8881ee79bbd24a4ef3e98ad098dda0117e7c78f6))
+* set permissions for Ruby binaries on GH Actions ([5701c0f](https://github.com/pact-foundation/pact-js/commit/5701c0fbc290bddb97d1b9a035c615782b79f462))
+* **pact-node:** bump dependency on pact-node to get verbose logging in verification [#583](https://github.com/pact-foundation/pact-js/issues/583) ([8b26262](https://github.com/pact-foundation/pact-js/commit/8b26262c2cf970a7b86e76c68c12d89ee689f9a4))
+* increase provider test timeout ([f850859](https://github.com/pact-foundation/pact-js/commit/f850859f2cf47b741e070fd52665befc7f5e9b90))
+* publish V3 was not kicking off the native libs release process ([23bd533](https://github.com/pact-foundation/pact-js/commit/23bd533c9f3e5e98c0326c3764d8113d63ddc5a4))
+
+## [9.14.0](https://github.com/pact-foundation/pact-js/compare/v9.13.2...v9.14.0) (2021-01-09)
+
+
+### Features
+
+* add request/response tracing ([37c3dc3](https://github.com/pact-foundation/pact-js/commit/37c3dc356c819d08bca114d7d76983ea606368fd))
+
+
+### Fixes and Improvements
+
+* **logger:** Message consumers now respect the specified log level ([98e601c](https://github.com/pact-foundation/pact-js/commit/98e601c7b5ee97b5f9d620abc1542f702cfe84b7))
+* **pact-web:** Pact-web is now built using webpack 4. Please let us know if there are any issues ([27fd1b5](https://github.com/pact-foundation/pact-js/commit/27fd1b5fb737f29a1c0b326ddd89ab9b2a21aaa6))
+
+### [9.13.2](https://github.com/pact-foundation/pact-js/compare/v9.13.1...v9.13.2) (2021-01-04)
+
+
+### Bug Fixes
+
+* **popsicle:** Increase maxBufferSize of requests to infinity ([8fd751a](https://github.com/pact-foundation/pact-js/commit/8fd751a9e73b7f9150eb938f4d083d2ab235d747))
+* **web:** Use latest can-i-use database when producing distribution ([cae3ea2](https://github.com/pact-foundation/pact-js/commit/cae3ea28199e55397b74c56d5e99e2f0430a6c5d))
+* small errors ([076549e](https://github.com/pact-foundation/pact-js/commit/076549e9cf5c9cb5798104bcda7d1cb97c1daf83))
+
+### [9.13.1](https://github.com/pact-foundation/pact-js/compare/v9.13.0...v9.13.1) (2020-12-11)
+
+
+### Bug Fixes
+
+* Expect at least one millisecond digit in iso8601DateTimeWithMillis ([4f48823](https://github.com/pact-foundation/pact-js/commit/4f48823586467fcdf3932b391cb961cfccb8d4eb))
+
+## [9.13.0](https://github.com/pact-foundation/pact-js/compare/v9.12.2...v9.13.0) (2020-10-23)
+
+
+### Features
+
+* allow WebDav REPORT request ([2928613](https://github.com/pact-foundation/pact-js/commit/2928613e35a52d76dff90981a8319df20ea1fccc))
+
 ### [9.12.2](https://github.com/pact-foundation/pact-js/compare/v9.12.1...v9.12.2) (2020-10-06)
 
 
