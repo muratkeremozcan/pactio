@@ -1,4 +1,4 @@
-// (2) identify the CONSUMER: identify the component which makes the HTTP calls to the provider 
+// (0) identify the CONSUMER: identify the component which makes the HTTP calls to the provider 
 
 const request = require('superagent')
 const { Order } = require('./order')

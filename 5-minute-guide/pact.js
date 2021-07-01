@@ -1,4 +1,4 @@
-// (3) create the MOCK PROVIDER
+// (1) create the MOCK PROVIDER
 
 const pact = require('@pact-foundation/pact')
 const Pact = pact.Pact

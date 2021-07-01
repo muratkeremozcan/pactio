@@ -1,4 +1,4 @@
-// (1) identify MODEL: identify the data to be retrieved from the provider
+// (0) identify MODEL: identify the data to be retrieved from the provider
 module.exports = [
   {
     id: 1,

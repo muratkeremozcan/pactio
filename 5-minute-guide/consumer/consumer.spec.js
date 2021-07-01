@@ -1,4 +1,4 @@
-// (4) write the pact.io test
+// (2) write the pact.io test
 
 const chai = require('chai')
 const chaiAsPromised = require('chai-as-promised')

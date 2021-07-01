@@ -2,7 +2,7 @@ const { Verifier } = require('@pact-foundation/pact');
 const controller = require('./product.controller');
 const Product = require('./product');
 
-// (5) supply the pact file to the PROVIDER and run verify that the provider meets all consumer expectations
+// (3) supply the pact file to the PROVIDER and run verify that the provider meets all consumer expectations
 
 const app = require('express')();
 const authMiddleware = require('../middleware/auth.middleware');

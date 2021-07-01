@@ -4,11 +4,11 @@ import {API} from "./api";
 import {eachLike, like} from "@pact-foundation/pact/dsl/matchers";
 
 // high level: 
-// (3) create the MOCK PROVIDER; new Pact({...})
-// (4) write the pact.io test and generate the pact file
-// (5) supply the pact file to the PROVIDER (use a broker) and run the provider test
+// (1) create the MOCK PROVIDER; new Pact({...})
+// (2) write the pact.io test and generate the pact file
+// (3) supply the pact file to the PROVIDER (use a broker) and run the provider test
 
-// (3) create the MOCK PROVIDER
+// (1) create the MOCK PROVIDER
 const provider = new Pact({
     consumer: 'FrontendWebsite',
     provider: 'ProductService',
@@ -18,7 +18,7 @@ const provider = new Pact({
     spec: 2
 });
 
-// (4) write the pact.io test and generate the pact file
+// (2) write the pact.io test and generate the pact file
 describe("API Pact test", () => {
 
     // (4.1) setup the MOCK PROVIDER, then verify each pact
